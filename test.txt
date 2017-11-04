@@ -1,0 +1,6 @@
+
+Bundler
+  Gemfile
+    has correct syntax
+    should specify rubygems as a source using the SSL protocol on the first line
+    should list the hashie gem without specifying a version
