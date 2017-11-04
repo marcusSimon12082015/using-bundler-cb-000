@@ -1,0 +1,25 @@
+
+Bundler
+  Gemfile
+    has correct syntax
+    should specify rubygems as a source using the SSL protocol on the first line
+    should list the hashie gem without specifying a version (FAILED - 1)
+
+Failures:
+
+  1) Bundler Gemfile should list the hashie gem without specifying a version
+     Failure/Error: expect(@gemfile_text =~ /gem ['"]hashie['"]$/).not_to eq(nil)
+
+       expected: value != nil
+            got: nil
+
+       (compared using ==)
+     # ./spec/bundler_spec.rb:27:in `block (3 levels) in <top (required)>'
+
+Finished in 0.92869 seconds (files took 0.20375 seconds to load)
+3 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/bundler_spec.rb:26 # Bundler Gemfile should list the hashie gem without specifying a version
+
