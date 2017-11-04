@@ -1,0 +1,31 @@
+
+Bundler
+  Gemfile
+    has correct syntax
+    should specify rubygems as a source using the SSL protocol on the first line
+    should list the hashie gem without specifying a version
+    should list the sinatra gem with the specific version 1.4.4
+    should list the octokit gem specifying version 2.0 with a twiddle-wakka
+    should list the awesome_print gem specifying a remote git repository (use github)
+    groups
+      should contain the pry gem in the development group using a hash argument to the gem method
+      should contain the rspec gem in the test group using block syntax (FAILED - 1)
+
+Failures:
+
+  1) Bundler Gemfile groups should contain the rspec gem in the test group using block syntax
+     Failure/Error: expect(@gemfile_text =~ /group (:test|['"]test['"]) do/).not_to eq(nil)
+
+       expected: value != nil
+            got: nil
+
+       (compared using ==)
+     # ./spec/bundler_spec.rb:64:in `block (4 levels) in <top (required)>'
+
+Finished in 2.05 seconds (files took 0.24956 seconds to load)
+8 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/bundler_spec.rb:63 # Bundler Gemfile groups should contain the rspec gem in the test group using block syntax
+
